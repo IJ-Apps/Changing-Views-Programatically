@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context="app.ij.changingviewsprogramatically.MainActivity"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/text"
+        android:textAlignment="center"
+        android:text="Hello World!"
+        android:textSize="30sp"
+        android:background="#FFD8D8"
+        android:layout_marginBottom="30sp"
+        android:layout_above="@id/change"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        android:layout_above="@id/marginChange"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:id="@+id/change" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/marginChange"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="80sp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Up"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/empty1"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:id="@+id/up" />
+        <RelativeLayout
+            android:layout_width="80sp"
+            android:id="@+id/empty1"
+            android:layout_centerInParent="true"
+            android:layout_height="1sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Down"
+            android:textAllCaps="false"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/empty1"
+            android:textSize="25sp"
+            android:id="@+id/down" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/sizeChange"
+        android:layout_below="@+id/marginChange"
+        android:layout_marginTop="30sp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grow"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/empty2"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:id="@+id/grow" />
+        <RelativeLayout
+            android:layout_width="80sp"
+            android:id="@+id/empty2"
+            android:layout_centerInParent="true"
+            android:layout_height="1sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shrink"
+            android:textAllCaps="false"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/empty2"
+            android:textSize="25sp"
+            android:id="@+id/shrink" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
